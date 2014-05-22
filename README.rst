@@ -1,4 +1,4 @@
-Spectral Analyzer for .pff Files
+Spectral Analyzer for .pbf Files
 ################################
 
 Intro
@@ -17,13 +17,20 @@ console and get dropped into the shell. You also need libpbf
 Usage
 -----
 
-Change script parameters if wanted. Then run 
+Run 
 
 >make
->./specan --file={path} --threshold={threshold}
+>./specan --file={path} 
 
 The file parameter is necessary and can either be an absolute path or
-a stub. The threshold is optional and defaults to zero if non provided.
+a stub. There are also another few command-line options
+
+>--threshold={int}
+>--module={int}
+>--channel={int}
+>-b 
+
+The threshold is optional and defaults to zero if not provided. Module and channel allow making the spectrum for a single module and channel. The -b flag tells the program to continuously populate and draw the spectrum online (otherwise it is just dumped to file). 
 
 Credit
 ------
